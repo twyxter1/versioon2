@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 150%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 100%;
+        }
+
+        /* The Close Button */
+        .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        td, th
+        {
+            border: 1px solid black;
+            padding: 1rem;
+        }
+
+        th
+        {
+            color: #fff;
+            background-color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Food Database</h2>
+
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open ERD</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Food Database ERD</h3>
+            <img src="../ERD/img/ERD.jpg" alt="ERD">
+
+            <h3>ERD Description</h3>
+
+            <h3>Table FoodType</h3>
+
+            <ul>
+                <li>Entity Relationship Diagram, also known as ERD, ER Diagram or ER model, is a type of structural diagram for use in database design.</li>
+                <li>PK - Primary Key, INT - value in numbers, VARCHAR - character data that is varying. Also known as Variable Character, it is an indeterminate length string data type</li>
+            </ul>
+        </div>
+
+        <h3>Table FoodInTheFridge</h3>
+
+        <ul>
+            <li>Entity Relationship Diagram, also known as ERD, ER Diagram or ER model, is a type of structural diagram for use in database design.</li>
+            <li>PK - Primary Key, INT - value in numbers, VARCHAR - character data that is varying. Also known as Variable Character, it is an indeterminate length string data type. FK - an entity is the reference to the primary key of another entity. In the ERD that attribute will be indicated with 'FK' behind its name.</li>
+        </ul>
+    </div>
+
+    </div>
+
+    <h4>Food Type</h4>
+    <table>
+        <tr>
+        <th>Id</th>
+        <th>TypeName</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Dairy</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Meat and Poultry</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Fish and Seafood</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Vegetable</td>
+        </tr>
+    </table>
+
+    <h4>Food In The Fridge</h4>
+    <table>
+        <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>TypeId</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Fish Fingers</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>Tomato</td>
+            <td>4</td>
+        </tr>
+
+        <tr>
+            <td>3</td>
+            <td>Chicken</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>4</td>
+            <td>Can of Tuna</td>
+            <td>3</td>
+        </tr>
+
+        <tr>
+            <td>5</td>
+            <td>Broccoli</td>
+            <td>4</td>
+
+            <tr>
+                <td>6</td>
+                <td>Cheese</td>
+                <td>1</td>
+            </tr>
+
+            <tr>
+                <td>7</td>
+                <td>Yoghurt</td>
+                <td>1</td>
+
+                <tr>
+                    <td>8</td>
+                    <td>Beef Steak</td>
+                    <td>2</td>
+                </tr>
+            </tr>
+        </tr>
+    </table>
+
+    <footer style="text-align: center; margin-top: 5rem;">Copyright 2021 &#169 J.K</footer>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
