@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.accordion2 {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion2:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+
+body {
+  font-family: Arial;
+  color: white;
+}
+
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: rgb(250, 89, 60);
+}
+
+.right {
+  right: 0;
+  background-color: rgb(55, 0, 80);
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+</style>
+</head>
+<body>
+
+    
+
+    <div class="split left">
+        <div class="centered">
+            <h1 style="color:rgb(55, 0, 80); font-size:3vw; text-align:right">GIT</h1>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_OZVJpLHUaI" title="YouTube video player" frameborder="3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+      
+          <button class="accordion"><b>MÄRKMED</b></button>
+          <div class="panel">
+            <p style="color:rgb(0, 0, 0); text-align:left"><b>'git init'</b> - git repositooriumi tuvastamine projektikausta seest</p>
+            <p style="color:rgb(0, 0, 0); text-align:left"><b>'git status'</b> - failide oleku tuvastamine</p>
+            <p style="color:rgb(0, 0, 0); text-align:left"><b>'git add .'</b> - lisa kõik failid jälgimisse (ainult üks fail -> 'git add faili nimi')</p>
+            <p style="color:rgb(0, 0, 0); text-align:left"><b>'git commit -m "..."</b> - salvesta failiversioon (punktide asemele läheb muudatuse kirjeldus)</p>
+            <p style="color:rgb(0, 0, 0); text-align:left"><b>'git branch'</b> - vaata olemasolevaid branche</p>
+            <p style="color:rgb(0, 0, 0); text-align:left"><b>'git log'</b>- vaata muudatuste nimekirja </p>
+            <p style="color:rgb(0, 0, 0); text-align:left"><b>'git master'</b> - master branchi uuesti sisestamine </p>
+            <p style="color:rgb(0, 0, 0); text-align:left"><b>'git reset -- hard (muudatuse ID mida tahame kasutada)'</b> - mine selle muudatuse juurde ja kustuta kõik järgnevad</p>
+            <p style="color:rgb(0, 0, 0); text-align:left"><b>'git checkout -b (branchi nimi)'</b> - Tee uus branch millel on kõik eelnevate branchide commitid </p>
+            <p style="color:rgb(0, 0, 0); text-align:left"><b>'git checkout master' = 'git master'</b> - muuda master branchiks </p>
+            <p style="color:rgb(0, 0, 0); text-align:left"><b>'git merge (branchi nimi mida ühendada)'</b> - ühenda branchid </p>
+            <p style="color:rgb(0, 0, 0); text-align:left"><b>'git branch -D (branchi nimi mille tahad kustutada)'</b> - kustuta branch</p>
+          </div>
+      </div>
+      
+      <script>
+          var acc = document.getElementsByClassName("accordion");
+          var i;
+          
+          for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var panel = this.nextElementSibling;
+              if (panel.style.display === "block") {
+                panel.style.display = "none";
+              } else {
+                panel.style.display = "block";
+              }
+            });
+          }
+          </script>
+
+<div class="split right">
+  <div class="centered">
+
+    <h1 style="color:rgb(250, 89, 60); font-size:3vw; text-align:left">NOTES</h1>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mVnZVw4KJnc" title="YouTube video player" frameborder="3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+    <button class="accordion2"><b>MÄRKMED</b></button>
+    <div class="panel">
+    <p style="color:rgb(0, 0, 0); text-align:left"><b>’git remote add origin (Link)’</b> – Olemasoleva repositooriumi lisamine</p>
+    <p style="color:rgb(0, 0, 0); text-align:left"><b>’git remote’</b> – Laseb teha, vaadata või kustutada repositooriumi ühendusi</p>
+    <p style="color:rgb(0, 0, 0); text-align:left"><b>’git push -u origin master’</b> – Lükkab muudatused serverisse</p>
+    <p style="color:rgb(0, 0, 0); text-align:left"><b>’git branch’</b> – uue branchi tegemine</p>
+    <p style="color:rgb(0, 0, 0); text-align:left"><b>’git branch -m’</b> – branchi nime muutmine </p>
+    <p style="color:rgb(0, 0, 0); text-align:left"><b>’git clone’</b> – tee koopia oma repositooriumist</p>
+    <p style="color:rgb(0, 0, 0); text-align:left"><b>’git fetch’ </b>– repositooriumi allalaadimine kohalikku reposse</p>
+    <p style="color:rgb(0, 0, 0); text-align:left"><b>’git pull’</b> – laeb alla kogu repositooriumi ja koheselt uuendab kohalikku repositooriumit</p>
+        
+    </div>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion2");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+    </script>
+
+</body>
+</html> 
