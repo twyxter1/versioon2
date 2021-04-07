@@ -10,7 +10,7 @@
 ---
 ## 1. EESMÄRK
 
-Coming soon on foorum stiilis veebilehekülg kus enda arvamuse avaldamiseks ei pea ennast registreerima. Inimestel on võimalus kaasa rääkida erinevatel päevakajalistel teemadel, avaldada enda mõtteid ja arvamusi.
+Stay Frosty on foorum stiilis veebilehekülg kus enda arvamuse avaldamiseks ei pea ennast registreerima. Inimestel on võimalus kaasa rääkida erinevatel päevakajalistel teemadel, avaldada enda mõtteid ja arvamusi.
 
 ## 2. KASUTAJA
 Keskmine kasutaja ei pea omama foorumi külastamiseks erilist IT oskust. Kuna teemasi on väga erinevaid ning registreerimisvajadus puudub siis kasutajagrupi keskmist vanust on esialgu keeruline määratleda.
